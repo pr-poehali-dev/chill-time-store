@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +97,19 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rubik;
+  }
+}
+
+@layer components {
+  .stretch-text {
+    letter-spacing: 0.1em;
+    transform-origin: center;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .stretch-text:hover {
+    letter-spacing: 0.3em;
+    transform: scaleX(1.1);
   }
 }
